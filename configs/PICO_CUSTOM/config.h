@@ -4,24 +4,25 @@
 #define BOARD_NAME PICO_CUSTOM
 #define MANUFACTURER_ID RASP
 
-// mpu6050
-#define I2C_DEVICE I2CDEV_0
-#define I2C0_SDA_PIN PA20
-#define I2C0_SCL_PIN PA21
-
-#define USE_GYRO
-#define USE_I2C_GYRO
-#define USE_GYRO_MPU6050
-#define GYRO_I2C_INSTANCE I2CDEV_0
-
+// bmi160
 #define USE_ACC
-#define USE_ACC_MPU6050
+#define USE_GYRO
+#define USE_SPI_GYRO
+#define USE_ACCGYRO_BMI160
+
+#define SPI1_SCK_PIN PA10
+#define SPI1_SDI_PIN PA12
+#define SPI1_SDO_PIN PA11
+
+#define GYRO_1_CS_PIN PA13
+#define GYRO_1_SPI_INSTANCE SPI1
+#define GYRO_1_ALIGN CW0_DEG
 
 // motors
-#define MOTOR1_PIN PA10
-#define MOTOR2_PIN PA11
-#define MOTOR3_PIN PA12
-#define MOTOR4_PIN PA13
+#define MOTOR1_PIN PA2
+#define MOTOR2_PIN PA3
+#define MOTOR3_PIN PA4
+#define MOTOR4_PIN PA5
 
 // receiver
 #define PIOUART0_TX_PIN PA0
@@ -38,3 +39,12 @@
 #define I2C1_SDA_PIN PA6
 #define I2C1_SCL_PIN PA7
 #define MAG_I2C_INSTANCE I2CDEV_1
+
+// bmp280
+#define USE_BARO
+#define USE_BARO_SPI_BMP280
+#define SPI0_SCK_PIN PA18
+#define SPI0_SDI_PIN PA20
+#define SPI0_SDO_PIN PA19
+#define BARO_CS_PIN PA21
+#define BARO_SPI_INSTANCE SPI0
