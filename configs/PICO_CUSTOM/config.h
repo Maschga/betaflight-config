@@ -25,12 +25,12 @@
 #define MOTOR4_PIN PA5
 
 // receiver
-#define PIOUART0_TX_PIN PA0
-#define PIOUART0_RX_PIN PA1
+#define UART0_TX_PIN PA0
+#define UART0_RX_PIN PA1
+#define SERIALRX_UART SERIAL_PORT_UART0
 
 // gps + magnetometer
 #define USE_GPS
-#define USE_GPS_PLUS_CODES
 #define UART1_TX_PIN PA8
 #define UART1_RX_PIN PA9
 #define GPS_UART SERIAL_PORT_UART1
